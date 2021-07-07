@@ -10,6 +10,11 @@ y1=110
 x2=126
 y2=134
 
+#the factor holdes the val by which factor you want to contrast the image
+#and the thresh hold the threshold to Black & White the image if you change them here remember to change them also in data_creator.py script
+thresh = 70
+factor=2
+
 maxkills=12   #the higest kills images you have in data folder
 
 rmsdiff=[None]*(maxkills+1)    #the list that holds the rms diff of current img and the whole images in data
@@ -44,9 +49,8 @@ def modify(im):
                 im.putpixel((i,j),(redPixel, greenPixel, bluePixel));
 
     img_contr_obj=ImageEnhance.Contrast(im)
-    factor=2
     e_img=img_contr_obj.enhance(factor)
-    thresh = 70
+    
     fn = lambda x : 255 if x > thresh else 0
     new_im = e_img.convert('L').point(fn, mode='1')
     return new_im
@@ -55,7 +59,7 @@ def modify(im):
 #this functions does everything when a kill is registered
 def dosomething(kill):
     print("Kills are "+str(kill))
-    playsound("data/files/"+str(kill)+".mp3")  #save the sound(mp3 files) with corresponding kill name
+    playsound("data/files/"+str(kill)+".mp3")  #pls save the sound(mp3 files) with corresponding kill name to accces them here
     global lastkill,end
     lastkill=kill
     if(kill==maxkills): end=True
