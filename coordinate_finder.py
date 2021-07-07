@@ -1,3 +1,5 @@
+#run this script to find the coordinates of screenshots
+
 import pyscreenshot
 
 #(x1,y1) are the top left coordinate of the screenshot taken
