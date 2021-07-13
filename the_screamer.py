@@ -10,12 +10,13 @@ y1=110
 x2=126
 y2=134
 
+maxkills=12   #the higest kills images you have in data folder
+
 #the factor holdes the val by which factor you want to contrast the image
 #and the thresh hold the threshold to Black & White the image if you change them here remember to change them also in data_creator.py script
 thresh = 70
 factor=2
 
-maxkills=12   #the higest kills images you have in data folder
 
 rmsdiff=[None]*(maxkills+1)    #the list that holds the rms diff of current img and the whole images in data
 
