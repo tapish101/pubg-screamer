@@ -11,4 +11,5 @@ then use data_creator.py to create the ref img of each kill in data/img folder
 and finally the_screamer.py will do the magic, just cast your smartphone to pc
 #
 #
-#if you like to know more indepth detail you can head to my instructable:  <instructable link>
+#you can watch here <youtube link>
+  if you like to know more indepth detail you can head to my instructable:  <instructable link>
